@@ -34,7 +34,10 @@ Verifique si le permite ingresar algunos registro que no cumplan con las reglas 
 Asegúrate que tu consola devuelva los mensaje de error apropiados cuando intentas guardar un registro que no cumple 
 con las reglas de validación.
 
-irb(main):001:0> User.create!(first_name:"C", last_name:"U", email_address:"eprcristian@gmail.com", age:"6")
+-> User.create(first_name:"Cristian", last_name:"Uribe", email_address:"eprcristian@gmail.com", age:36).valid?
+true
+
+-> User.create!(first_name:"C", last_name:"U", email_address:"eprcristian@gmail.com", age:"6")
    (56.7ms)  SELECT sqlite_version(*)
 C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activerecord-6.1.6/lib/active_record/validations.rb:80:in `raise_validation_error': 
 Validation failed: First name :Nombre debe tener minimo 2 caracteres, Last name :Nombre debe tener minimo 2 caracteres, Age Please enter a valid age (ActiveRecord::RecordInvalid)
